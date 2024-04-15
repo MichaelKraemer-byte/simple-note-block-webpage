@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="render()">
+    <section class="positionBinNotesSection">
+        <div id="greyContainer" class="greyBackground d-none" onclick="closeBin()">        
+        </div>
+        <div id="binNotesSection" class="d-none">
+            <div class="flexEnd">
+                <button onclick="closeBin()" class="crossButton"><img class="crossImg" src="./img/close.png"/></button>
+            </div>
+                <h1>Paper bin</h1>  
+                <button onclick="emptyBin()" class="emptyBinButton">Empty Bin</button>
+
+   
+            <div id="binContainer">
+
+            </div>
+        </div>
+    </section>
+
+        <div id="mainBoardContainer">
+            <div class="binLinkAndCreatorContainer">
+                <button onclick="openBin()" class="binButton"><img class="trashCanImg" src="./img/trash-can.png"/></button>
+                <div id="creatorContainer">
+                    <input id="title" placeholder="Title" type="text">
+                    <textarea id="note"  placeholder="Take a note..." type="text"></textarea>
+                    <button class="addAndDeleteButton" onclick="add()">Add</button>
+                </div>
+            </div>
+
+            <div id="notesSection">
+                <h2 id="h2">Your notes:</h2>
+                <div id="allNotesContainer">
+                    <div id="noteContainer">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>    
+</body>
+</html>
